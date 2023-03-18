@@ -235,7 +235,19 @@ namespace BrunoMikoski.ScriptableObjectCollections
                         continue;
 
                     if (collections.Contains(collection))
+                    {
+                        if (!collection.AutomaticallyLoaded)
+                        {
+                            collections.Remove(collection);
+                            changed = true;
+                        }
+
                         continue;
+                    }
+                    else if (!collection.AutomaticallyLoaded)
+                    {
+                        continue;
+                    }
 
                     collection.RefreshCollection();
                     collections.Add(collection);

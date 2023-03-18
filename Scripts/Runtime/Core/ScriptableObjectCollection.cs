@@ -33,6 +33,7 @@ namespace BrunoMikoski.ScriptableObjectCollections
 #pragma warning disable 0414
         [SerializeField]
         private bool automaticallyLoaded = true;
+        public bool AutomaticallyLoaded => automaticallyLoaded;
 #if UNITY_EDITOR
         [SerializeField]
         private bool generateAsPartialClass = true;
