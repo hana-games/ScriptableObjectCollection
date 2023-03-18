@@ -332,6 +332,16 @@ namespace BrunoMikoski.ScriptableObjectCollections
             }
         }
 #endif
+
+        public void Clear()
+        {
+            for (int i = 0; i < collections.Count; i++)
+            {
+                collections[i].Clear();
+            }
+            
+            collections.Clear();
+        }
     }
 }
 

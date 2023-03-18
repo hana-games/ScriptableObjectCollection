@@ -416,6 +416,11 @@ namespace BrunoMikoski.ScriptableObjectCollections
         {
         }
 
+        public virtual void Clear()
+        {
+            items.Clear();
+            ObjectUtility.SetDirty(this);
+        }
     }
 
     public class ScriptableObjectCollection<ObjectType> : ScriptableObjectCollection, IList<ObjectType>
@@ -604,5 +609,11 @@ namespace BrunoMikoski.ScriptableObjectCollections
             Debug.Log($"{typeof(ObjectType)}: {items.Count}");
         }
 #endif
+
+        public override void Clear()
+        {
+            base.Clear();
+            ClearCachedValues();
+        }
     }
 }
