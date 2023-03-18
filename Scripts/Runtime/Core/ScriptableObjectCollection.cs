@@ -214,12 +214,6 @@ namespace BrunoMikoski.ScriptableObjectCollections
             ObjectUtility.SetDirty(this);
         }
 
-        public void Clear()
-        {
-            items.Clear();
-            ObjectUtility.SetDirty(this);
-        }
-
         public bool Contains(object value)
         {
             return Contains((ScriptableObjectCollectionItem) value);
