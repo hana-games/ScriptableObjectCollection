@@ -413,7 +413,7 @@ namespace BrunoMikoski.ScriptableObjectCollections
 
         public virtual void Clear()
         {
-            items.Clear();
+            // items.Clear();
             ObjectUtility.SetDirty(this);
         }
     }
